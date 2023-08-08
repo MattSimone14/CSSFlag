@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Flag Project</title>
+  <style>
+
+    h1 {
+      text-align: center;
+    }
+
+
+    .flag {
+      width: 900px;
+      height: 600px;
+      background-color: #f8f8ff;
+    }
+
+
+    .square {
+      width: 250px;
+      height: 250px;
+      background-color: blue;
+    }
+
+
+    .square > div {
+      margin: 50px 0;
+      position: relative;
+      display: block;
+      color: white;
+      width: 0px;
+      height: 0px;
+      border-right: 100px solid transparent;
+      border-bottom: 70px solid white;
+      border-left: 100px solid transparent;
+      transform: rotate(35deg);
+      top: 80px;
+      left: 20px;
+    }
+    .square > div:before {
+      border-bottom: 80px solid white;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      position: absolute;
+      height: 0;
+      width: 0;
+      top: -45px;
+      left: -65px;
+      display: block;
+      content: '';
+      transform: rotate(-35deg);
+    }
+    .square > div:after {
+      position: absolute;
+      display: block;
+      color: white;
+      top: 3px;
+      left: -105px;
+      width: 0px;
+      height: 0px;
+      border-right: 100px solid transparent;
+      border-bottom: 70px solid white;
+      border-left: 100px solid transparent;
+      transform: rotate(-70deg);
+      content: '';
+    }
+
+
+
+
+    .rectangle {
+      width: 900px;
+      height: 350px;
+      background-color: red;
+    }
+
+  </style>
+</head>
+
+<h1>Flag of Chile</h1>
+
+<body>
+  <div class="flag">
+    <div class="square">
+      <div class="star">
+      </div>
+    </div>
+    <div class="rectangle">
+    </div>
+  </div>
+</body>
+
+</html>
